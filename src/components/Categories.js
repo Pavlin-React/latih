@@ -4,21 +4,23 @@ import CategoryItem from './CategoryItem'
 
 const Categories = ({ commonCategories, term, setTerm}) => {
   return (
-    <FlatList
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      data={commonCategories}
-      renderItem={({ item, index }) => (
-        <CategoryItem
-          name={item.name}
-          imageUrl={item.imageUrl}
-          index={index}
-          active={item.name === term}
-          handlePress={() => setTerm(item.name)}
-        />
-      )}
-      keyExtractor={(item) => item.name}
-    />
+    <View>
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        data={commonCategories}
+        renderItem={({ item, index }) => (
+          <CategoryItem
+            name={item.name}
+            imageUrl={item.imageUrl}
+            index={index}
+            active={item.name === term}
+            handlePress={() => setTerm(item.name)}
+          />
+        )}
+        keyExtractor={(item) => item.name}
+      />
+    </View>
   );
 };
 

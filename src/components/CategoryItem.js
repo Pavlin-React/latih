@@ -5,13 +5,13 @@ import { Shadow } from "react-native-shadow-2";
 const CategoryItem = ({ name, imageUrl, index, active, handlePress }) => {
   return (
     <Shadow
-      sides={("bottom", "right")}
+      sides={["bottom", 'right']}
       corners={"bottomRight"}
       containerViewStyle={{
         marginLeft: 15,
         marginVertical: 15,
-      }}  
-    > 
+      }}
+    >
       <TouchableOpacity
         onPress={handlePress}
         style={[
